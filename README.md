@@ -13,10 +13,6 @@ topics:
    - 
 description: ""
 ---
-\iffalse
-navigate: [[20210222131107]] TOC - Table of Content
-references: 
-\fi
 
 \pagenumbering{gobble}
 \title{Jason Scott's favorite 100 - data analysis using NLP}
