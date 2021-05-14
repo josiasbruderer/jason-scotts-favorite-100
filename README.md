@@ -1,33 +1,14 @@
 ---
 title: "Jason Scott's favorite 100"
 subject: "Mini-Project in the ABC of Computational Text Analysis"
-id: 20210514201402
 lang: de-CH
+date: 14. Mai 2021
 author:
   - name: Josias Bruderer
     affiliation:  Universität Luzern
-keywords:
-  - unilu
-  - FS211368
-topics:
-   - 
-description: ""
 ---
 
-\pagenumbering{gobble}
-\title{Jason Scott's favorite 100 - data analysis using NLP}
-\subtitle{Mini-Project in the ABC of Computational Text Analysis}
-\date{\small{14. Mai 2021}}
-\maketitle
-
-\section*{Abstract}
-
-
-\setcounter{tocdepth}{3}
-\tableofcontents
-
-\newpage
-\pagenumbering{arabic}
+\input{latex/header.tex}
 
 # Einleitung
 

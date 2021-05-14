@@ -13,3 +13,6 @@ __pycache__/
 # General tmp directories
 .tmp
 */.tmp/*
+
+# zettlr
+.ztr-directory
