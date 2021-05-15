@@ -41,14 +41,14 @@ class DataWrangler:
         try:
             # download zip file
             r = requests.get(data_url, allow_redirects=True)
-            open(self.tmp_dir + name + ".zip", 'wb').write(r.content)
+            open(self.tmp_dir + "/" + name + ".zip", 'wb').write(r.content)
         except:
             print ("Unexpected error: ", sys.exc_info()[0])
             raise
 
         try:
             # extract zip file to data directory
-            with zipfile.ZipFile(self.tmp_dir + name + ".zip", 'r') as zip_ref:
+            with zipfile.ZipFile(self.tmp_dir + "/" + name + ".zip", 'r') as zip_ref:
                 zip_ref.extractall(self.data_dir)
         except:
             print ("Unexpected error: ", sys.exc_info()[0])
