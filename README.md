@@ -1,6 +1,6 @@
 ---
-title: "Jason Scott's favorite 100"
-subject: "Mini-Project in the ABC of Computational Text Analysis"
+title: "Jason Scott's favorite 100 - data analysis using NLP"
+subject: "Mini-Project im Seminar «the ABC of Computational Text Analysis»"
 lang: de-CH
 date: 07. Juni 2021
 author:
@@ -12,7 +12,7 @@ author:
 
 # Einleitung
 
-In den frühen Jahren des Internets war der Informationsaustausch und die Kommunikation nicht gleich einfach gestaltet wie heute. Trotzdem wurde in der Vernetzung ein grosses Potential erkannt und techno-utopische Communities entstanden. Ein Mittel zum Austausch waren Bulletin Board Systeme (BBS), Server auf denen jede und jeder, mit Zugriff zu einem am Telefonnetz angeschlossenen Computer, Texte hoch- und herunterladen konnten.[^1] Jason Scott[^2] unterhält ein Archiv mit einem Umfang von 58'000 solcher Text-Dateien.
+In den frühen Jahren des Internets war der Informationsaustausch und die Kommunikation nicht gleich einfach gestaltet wie heute. Trotzdem wurde in der Vernetzung ein grosses Potential erkannt und techno-utopische Communities entstanden. Ein Mittel zum Austausch waren Bulletin Board Systeme (BBS), Server auf denen jede und jeder mit Zugriff zu einem am Telefonnetz angeschlossenen Computer, Texte hoch- und herunterladen konnten.[^1] Jason Scott[^2] unterhält ein Archiv mit einem Umfang von 58'000 solcher Text-Dateien.
 
 Als Vorbereitung für die Hauptseminararbeit (HSA)[^3], in welcher dieses Archiv zur Beantwortung der Frage nach dem Einfluss der BBS auf die 1996 formulierte «Declaration of the Independence of Cyberspace»[^4] dienen soll, wird in diesem Mini-Project[^5] der verkleinerte Datensatz «favorite 100» untersucht. Konkret soll geprüft werden, ob inhaltliche Auffälligkeiten bestehen, die möglicherweise Rückschlüsse auf Scotts Interessen und seine Biografie zulassen. Dieses Mini-Project soll ebenfalls zur Einschätzung dienen, wie aufwändig die Bereinigung des gesammten Textkorpuses ($N=58'0000$ Dateien) sein wird.
 
@@ -26,17 +26,17 @@ Untersuchungsgegenstand dieses Projekts ist der Datensatz «Jason Scott's Top 10
 
 Die Dateien werden mittels Python heruntergeladen und bereitgestellt (R2[^6]) und anschliessend ein Datensatz mit den Dateinamen, Längen und Inhalt erstellt (R3.1.1). Die manuelle Untersuchung des Datensatzes (Anhang 1) zeigt:
 
-* Die **Variation** der Textdateien ist relativ gross und reicht von kurzen witzigen Beiträgen und Unterhaltungsverläufen, über ASCII Art bis hin zu detaillierten technischen Instruktionen und Dokumentationen sowie eine Masterarbeit und ein ganzes Buch.
-* In gewissen Textdateien wird ein **«Read X times»** ausgewiesen wird. Diese Zahlen sind relativ niedrig (meist <100). 
-* **Ungültige Zeichen** kommen häufig vor (z.B. «\u1a\u1a\u1a»). Diese müssen gefiltert werden (bereits in Datenimport sprich DataWrangler.get_texts() implementiert).
+* Die **Variation** der Textdateien ist relativ gross und reicht von kurzen witzigen Beiträgen und Unterhaltungsverläufen, über ASCII Art bis hin zu detaillierten technischen Instruktionen und Dokumentationen sowie einer Masterarbeit und einem ganzes Buch.
+* In gewissen Textdateien wird ein **«Read X times»** ausgewiesen. Diese Zahlen sind relativ niedrig (meist <100). 
+* **Ungültige Zeichen** kommen häufig vor (z.B. «\\u1a\\u1a\\u1a»). Diese müssen gefiltert werden (bereits in Datenimport sprich DataWrangler.get_texts() implementiert).
 * Textfiles.com führt nebst den Dateien auch Titel (inkl. Jahr wenn vorhanden) und Kategorisierung sowie zum Teil eine Beschreibung auf. Diese **Metadaten** können für die Analyse nützlich sein.
-* Textdateien im Nachrichten-Format können anhand **Headerparameter** wie z.B. *From, Subject, Date, Organization* erkannt werden.
-* Folgende **Datumsformate** können sind zu finden: «1991», «1/8/86», «02/25/88», «Copyright 1993 by», «(n)o copyright!, 1985», «8-25-86», «17 March 1981 13:59 est», «updated 2-12-92», «Date: 1 Mar 89 11:30:05 GMT», «August 2nd 1985», «b-file#1 nov. 1984», «(c) 1984-85 NPI/Appa Teleworks I», «Published       June, 1971»; Vorsicht ist mit Telefonnummern geboten, da diese teils ebenfalls zwei- und vierstellige Zahlen beinhalten (z.B. «(609)/921-1994»)
+* Textdateien mit E-Mail charakteristik können anhand **Headerparameter** wie z.B. *From, Subject, Date, Organization* erkannt werden.
+* Folgende **Datumsformate** sind zu finden: «1991», «1/8/86», «02/25/88», «Copyright 1993 by», «(n)o copyright!, 1985», «8-25-86», «17 March 1981 13:59 est», «updated 2-12-92», «Date: 1 Mar 89 11:30:05 GMT», «August 2nd 1985», «b-file#1 nov. 1984», «(c) 1984-85 NPI/Appa Teleworks I», «Published       June, 1971»; Vorsicht ist mit Telefonnummern geboten, da diese teils ebenfalls zwei- und vierstellige Zahlen beinhalten (z.B. «(609)/921-1994»)
 * Es kann nicht davon ausgegangen werden, dass die Textdateien **orthografisch** fehlerfrei sind. Ebenfalls ist mit ***Gunk** «(replacing U for You, 0 for O, Z for S, and similar gunk)»* zu rechnen.
 * **Inhaltlich** kommt von sauber recherchierten Artikeln und Facts bis hin zu wilder Fiktion und Ironie alles vor. 
-* Die beim Download von .zip Dateien enhaltene **index.html** kann für die Ermittlung von Metadaten nützlich sein, ansonsten soll diese nicht analysiert werden, das sie keine BBS Textdatei repräsentiert.
+* Die beim Download von .zip Dateien enhaltene **index.html** kann für die Ermittlung von Metadaten nützlich sein, ansonsten soll diese nicht analysiert werden, da sie keine BBS Textdatei repräsentiert.
 
-Anhand der manuellen Untersuchung konnten erste Erkenntnisse gewonnen werden, die im weiteren Verlauf dieses Projekts relevant sind respektive für die HSA von Bedeutung sind:
+Anhand der manuellen Untersuchung konnten erste Erkenntnisse gewonnen werden, die im weiteren Verlauf dieses Projekts relevant sind, respektive für die HSA von Bedeutung sind:
 
 * Die folgenden zehn Textdateien sollen für die HSA genauer betrachtet werden, um daran exemplarisch den Zusammenhang von BBS und der Declaration aufzuzeigen: *billrights.fun, cDc-0200.txt, crossbow, eel_bye.txt, hack_ths.txt, hack7.txt, iaad.txt, modemlif.hac, pezrambl.oct, tr823.txt*
 * Der Textkorpus soll entsprechend bereinigt werden, dass vor allem Fliesstext in die Auswertung einfliesst. Auch sollen unterstützende Metadaten dafür generiert werden. Das Vorgehen wird wie folgt vorgeschlagen (alles in DataWrangler.get_texts() implementiert)
@@ -100,6 +100,12 @@ Durch diese erste Analyse der Top 100 Textfiles von Jason Scott kann ein gewisse
 Die Ergebnisse der manuellen Untersuchung wurden in einem Spreadsheet zusammengetragen. Es kann heruntergeladen werden unter: [https://git.makersphere.ch/josias/jason-scotts-favorite-100/raw/master/workspace/top100.ods](https://git.makersphere.ch/josias/jason-scotts-favorite-100/raw/master/workspace/top100.ods)
 
 
+## Anhang 2: Präsentation
+
+Unter folgendem Link ist eine Aufzeichnung (vom 27.05.2021) der Präsentation zum Mini-Project verfügbar: [https://ipfs.chixodo.xyz/ipfs/QmddarVDZ6tbJZChUiiKQZw4y3kG8MPrwJJc4YhrjcGgMX](https://ipfs.chixodo.xyz/ipfs/QmddarVDZ6tbJZChUiiKQZw4y3kG8MPrwJJc4YhrjcGgMX)
+
+
+
 # Quellen
 
 
@@ -108,5 +114,5 @@ Die Ergebnisse der manuellen Untersuchung wurden in einem Spreadsheet zusammenge
 [^2]: Amerikanischer Archivar, Historiker und Betreiber von textfiles.com sowie Mitwirkender bei archive.org.
 [^3]: Das Exposé ist verfügbar unter dem folgenden Link: [https://git.makersphere.ch/josias/jason-scotts-favorite-100/raw/master/Expose_HSA.pdf](https://git.makersphere.ch/josias/jason-scotts-favorite-100/raw/master/Expose_HSA.pdf)
 [^4]: Verfasst von der Electronic Frontier Foundation (EFF)
-[^5]: Der Sourcecode ist verfügbar unter: [https://git.makersphere.ch/josias/jason-scotts-favorite-100/tree/master/workspace](https://git.makersphere.ch/josias/jason-scotts-favorite-100/tree/master/workspace)
+[^5]: Der Sourcecode ist verfügbar im Repository unter: [https://git.makersphere.ch/josias/jason-scotts-favorite-100/tree/master/workspace](https://git.makersphere.ch/josias/jason-scotts-favorite-100/tree/master/workspace)
 [^6]: Verweis zu entsprechenden Abschnitten in der Code-Dokumentation

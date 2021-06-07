@@ -160,7 +160,7 @@ html = st.produce_scattertext_explorer(corpus_speeches,
 )
 
 # write visualization to html file
-fname = "./analysis/viz_declaration_textfiles.html"
+fname = "../public/viz_declaration_textfiles.html"
 open(fname, 'wb').write(html.encode('utf-8'))
 
 
