@@ -156,17 +156,28 @@ $endif$
 %----------------------------------------------------------------------------------------
 %	HYPERLINKS
 %---------------------------------------------------------------------------------------
+\usepackage{hyperref}
 \hypersetup{
-draft, % Uncomment to remove all links (useful for printing in black and white)
-colorlinks=true, breaklinks=true, bookmarks=true,bookmarksnumbered,
-urlcolor=webbrown, linkcolor=RoyalBlue, citecolor=webgreen, % Link colors
-pdftitle={$PDF_TITLE$}, % PDF title
-pdfauthor={$PDF_AUTHOR$}, % PDF Author
-pdfsubject={$PDF_SUBJECT$}, % PDF Subject
-pdfkeywords={$PDF_KEYWORDS$}, % PDF Keywords
-pdfcreator={pdfLaTeX}, % PDF Creator
-pdfproducer={LaTeX with hyperref and ClassicThesis} % PDF producer
+	colorlinks=true, 
+	breaklinks=true, 
+	bookmarks=true, 
+	bookmarksnumbered=true, 
+	bookmarksopen=true,
+	plainpages=false, 
+	pdfpagelabels=true,
+	urlcolor=black, 
+	linkcolor=black, 
+	citecolor=black, 
+	filecolor=black, % Link colors
+	pdftitle={$PDF_TITLE$}, % PDF title
+	pdfauthor={$PDF_AUTHOR$}, % PDF Author
+	pdfsubject={$PDF_SUBJECT$}, % PDF Subject
+	pdfkeywords={$PDF_KEYWORDS$}, % PDF Keywords
+	pdfcreator={pdfLaTeX}, % PDF Creator
+	pdfproducer={LaTeX with hyperref and ClassicThesis} % PDF producer
 }
+
+\usepackage{bookmark}
 
 \hyphenation{Ge-dächt-nis} % Specify custom hyphenation points in words with dashes where you would like hyphenation to occur, or alternatively, don't put any dashes in a word to stop hyphenation altogether
 

@@ -2,7 +2,7 @@
 title: "Jason Scott's favorite 100"
 subject: "Mini-Project in the ABC of Computational Text Analysis"
 lang: de-CH
-date: 26. Mai 2021
+date: 07. Juni 2021
 author:
   - name: Josias Bruderer
     affiliation:  Universität Luzern
@@ -97,26 +97,16 @@ Durch diese erste Analyse der Top 100 Textfiles von Jason Scott kann ein gewisse
 
 ## Anhang 1: Manuelle Untersuchung
 
-(attach ./workspace/top100.ods) #WIP
+Die Ergebnisse der manuellen Untersuchung wurden in einem Spreadsheet zusammengetragen. Es kann heruntergeladen werden unter: [https://git.makersphere.ch/josias/jason-scotts-favorite-100/raw/master/workspace/top100.ods](https://git.makersphere.ch/josias/jason-scotts-favorite-100/raw/master/workspace/top100.ods)
 
-## Anhang 2: Präsentation
 
-Vorbereitung: 
+# Quellen
 
-* http://localhost:8888/
-* file:///home/josias/projects/ch.josias.jason-scotts-favorite-100/workspace/analysis/viz_declaration_textfiles.html#d3-div-1-snippets
-* Readme.pdf
-* ./workspace/top100.ods
-* http://textfiles.com/ 
-* https://www.eff.org/cyberspace-independence
-* hack11a.txt, billrights.fun, 914bbs.txt
-* http://textfiles.com/art/kennedy.art
-* https://git.makersphere.io/josias/ch.josias.jason-scotts-favorite-100
 
 
 [^1]: Die Funktionen solcher BBS waren weitreichender. Für die in dieser Arbeit geplante Untersuchung stellt diese Funktion allerdings die wichtigste dar.
 [^2]: Amerikanischer Archivar, Historiker und Betreiber von textfiles.com sowie Mitwirkender bei archive.org.
-[^3]: Link zum Exposé: [https://ipfs.chixodo.xyz/ipfs/QmcU2XbwmzD7hhRxhMaQPgiCtAhWajfAwbaCREEzscHFPE](https://ipfs.chixodo.xyz/ipfs/QmcU2XbwmzD7hhRxhMaQPgiCtAhWajfAwbaCREEzscHFPE)
+[^3]: Das Exposé ist verfügbar unter dem folgenden Link: [https://git.makersphere.ch/josias/jason-scotts-favorite-100/raw/master/Expose_HSA.pdf](https://git.makersphere.ch/josias/jason-scotts-favorite-100/raw/master/Expose_HSA.pdf)
 [^4]: Verfasst von der Electronic Frontier Foundation (EFF)
-[^5]: Der Sourcecode ist verfügbar unter: [https://git.makersphere.io/josias/ch.josias.jason-scotts-favorite-100](https://git.makersphere.io/josias/ch.josias.jason-scotts-favorite-100)
+[^5]: Der Sourcecode ist verfügbar unter: [https://git.makersphere.ch/josias/jason-scotts-favorite-100/tree/master/workspace](https://git.makersphere.ch/josias/jason-scotts-favorite-100/tree/master/workspace)
 [^6]: Verweis zu entsprechenden Abschnitten in der Code-Dokumentation
